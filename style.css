@@ -1,5 +1,8 @@
-/* importing Google Fonts - Montserrat*/
+/* importerer Google Fonts  Roboto fonten*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100..900&display=swap');
+
+/* Denne setter regler som alt i css må følge*/
 
 * {
     margin: 0;
@@ -7,14 +10,15 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+/* Dette er en felles container som holder alle bildene*/
 
 .slider-container {
-    position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
-
 }
+/* Denne bestemmer hvilken størelse og posisjon bildene skal ha når de er på skjermen */
+
 .slider-wrapper .slider-item {
     position: relative;
     width: 100%;
@@ -22,6 +26,8 @@
     display: flex;
     align-items: center;
 }
+
+/* Denne bestemmer rekkefølgen ,plasseringen og farge-tonen på bildene i karusellen*/
 
 .slider-wrapper .slider-item::before {
     position: absolute;
@@ -52,24 +58,31 @@
     background-image: url("img-5.jpg");
 }
 
+/*Denne bestemmer plasseringen og fargen til teksten på bildene*/
+
 .slider-wrapper .slider-item .slide-content {
     color: #fff;
     z-index: 20;
     width: 100%;
     margin:  0 auto;
     padding: 0 1.25rem 0.625rem;
-    max-width: 1400px;
     position: relative;
 }
+
+/* Denne sikrer at teksten ikke går lenger ut enn 35%*/
 
 .slider-wrapper .slider-item .slide-content > * {
     max-width: 35%;
 }
 
+/* Denne bestemmer størelsen og tykkelsen på tekten over overskriften*/
+
 .slider-item .slide-content .slide-subtitle {
     font-size: 1rem;
     font-weight: normal;
 }
+
+/* Denne bestemmer størelsen, tykkelsen på tekten under overskriften, avstanden mellom overskriften og underoverskriften og bestemmer at alle bokstavene i overskriften skal være i store bokstaver*/
 
 .slider-item .slide-content .slide-title {
     font-size: 1.5rem;
@@ -78,10 +91,14 @@
     text-transform: uppercase;
 }
 
+/* Denne bestemmer størelsen og tykkelsen på teksten under overskriften*/
+
 .slider-item .slide-content .slide-description {
-margin-top: 1.563rem;
-line-height: 1.563rem;
+    margin-top: 1.563rem;
+    line-height: 1.563rem;
 }
+
+/* Denne bestemmer utseende, størelsen og tykkelsen på knappen*/
 
 .slider-item .slide-content .slide-button {
     color: #fff;
@@ -99,34 +116,9 @@ line-height: 1.563rem;
     transition: 0.5s ease
 }
 
+/* Denne bestemmer bakrundens og tekstens farge når man hovrer over den med musen*/
+
 .slider-item .slide-content .slide-button:hover {
     color: #000;
     background: #fff;
-}
-
-.slider-container .slider-controls {
-    position: absolute;
-    bottom: 45px;
-    z-index: 20;
-    width: 100%;
-    
-}
-
-.slider-controls .slider-pagination {
-    display: flex;
-    margin:  0 auto;
-    padding: 0 1.25rem ;
-    max-width: 1400px;
-    list-style: none;
-    justify-content: space-between;
-    
-}
-
-.slider-pagination .slider-tab {
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    font-size: 0.85rem;
-    padding: 20px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }

@@ -1,14 +1,7 @@
-const sliderTabs = document.querySelectorAll(".")
+// Denne starter Swiper som er et biblotek med forsjellige effekter på måten karusellen bytter bilde, bestemmer farten på overgangen mellom bildene og hvor lang tid den skal vente før slideren automatisk går videre til neste bilde
 
-// initialize swiper instance
-const swiper = new swiper(".slider-container", {
+const swiper = new Swiper(".slider-container", {
     effect: "slide",
     speed: 1300,
-     autoplay: { delay: 4000 }
-});
-
-sliderTabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-        swiper.sliderTo(index);
-    });
+    autoplay: { delay: 4000 }
 });
